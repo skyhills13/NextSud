@@ -7,5 +7,8 @@ public:
 	CPlayerCharacter(void);
 	~CPlayerCharacter(void);
 
+
+	void SetInfo();
+	void PrintInfo();
 };
 

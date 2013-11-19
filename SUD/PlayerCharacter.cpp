@@ -11,3 +11,13 @@ CPlayerCharacter::~CPlayerCharacter(void)
 {
 }
 
+void CPlayerCharacter::SetInfo()
+{
+	
+}
+
+void CPlayerCharacter::PrintInfo()
+{
+	
+}
+

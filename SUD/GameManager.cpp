@@ -17,6 +17,25 @@ CGameManager::~CGameManager(void)
 	delete m_PlayerCharacter;
 }
 
+void CGameManager::Init()
+{
+	printf("[GAME START!]\n");
+	srand((unsigned int)time(NULL));
+	CreateMonsters();
+
+	/*
+	Position pos;
+	pos.x = 5;
+	pos.y = 5;
+	m_PlayerCharacter->SetPosition(pos);
+	*/
+	m_PlayerCharacter->SetInfo();
+	m_PlayerCharacter->SetPosition(5,5);
+	m_PlayerCharacter->PrintInfo();
+	m_PlayerCharacter->PrintPosition(); // 프린트 인포 구현한 다음에 주석 처리할 것 
+
+}
+
 void CGameManager::CreateMonsters()
 {
 	/*
@@ -82,23 +101,6 @@ void CGameManager::CheckMap()
 void CGameManager::StartBattle(CMonster* pMonster)
 {
 	
-}
-
-void CGameManager::Init()
-{
-	printf("[GAME START!]\n");
-	srand((unsigned int)time(NULL));
-	CreateMonsters();
-
-	/*
-	Position pos;
-	pos.x = 5;
-	pos.y = 5;
-	m_PlayerCharacter->SetPosition(pos);
-	*/
-	m_PlayerCharacter->SetPosition(5,5);
-	m_PlayerCharacter->PrintPosition();
-
 }
 
 void CGameManager::Run()

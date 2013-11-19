@@ -40,7 +40,7 @@ public:
 	int GetPower(){return m_Power;}
 
 	bool IsAlive();
-	void HitCheck(AttackResult result, int damage);
+	//void HitCheck(AttackResult result, int damage);
 
 protected:
 	Position m_position;
@@ -48,6 +48,7 @@ protected:
 	int m_HP;
 	int m_Power;
 	int m_Level;
-
+	int m_Exp;
+	std::string m_Lang;
 };
 

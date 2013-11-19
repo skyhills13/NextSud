@@ -1,8 +1,6 @@
-#pragma once
+﻿#pragma once
 #define MAP_SIZE 10
 #include "Monster.h"
-
-
 
 struct MapInfo
 {

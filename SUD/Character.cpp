@@ -55,18 +55,18 @@ void CCharacter::PrintPosition()
 	printf_s("position : [%d, %d] \n", m_position.x, m_position.y);	
 }
 
-void CCharacter::HitCheck(AttackResult result, int damage)
-{
-	switch (result)
-	{
-	case Attack_HIT:
-		printf_s("%s가 (%d)의 피해를 입었다", GetName().c_str(), damage);
-		m_HP -= damage;
-		break;
-	case Attack_MISS:
-		printf_s();
-		break;
-	
-
-	}
-}
+//void CCharacter::HitCheck(AttackResult result, int damage)
+//{
+//	switch (result)
+//	{
+//	case Attack_HIT:
+//		printf_s("%s가 (%d)의 피해를 입었다", GetName().c_str(), damage);
+//		m_HP -= damage;
+//		break;
+//	case Attack_MISS:
+//		printf_s();
+//		break;
+//	
+//
+//	}
+//}

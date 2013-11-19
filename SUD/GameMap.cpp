@@ -1,5 +1,7 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "GameMap.h"
+
+// ì»¤ë°‹ í…ŒìŠ¤íŠ¸ìš©
 
 
 //#define ZERO_MEMORY(mem, size) memset(mem, 0, size)
@@ -27,7 +29,7 @@ CGameMap::~CGameMap(void)
 
 MapInfo* CGameMap::GetMapInfo(int x, int y)
 {
-	//return &m_MapInfo[x][y]; //¿Ö reference·Î ¹Ş¾Ò³Ä. Á¶ÀÛÇÏ·Á°í. value·Î ¹ŞÀ¸¸é ¸ÊÀÎÆ÷¸¦ ¹Ù²Ù¸é ¹Ù²î¾ú´Ù°¡ ¿ø·¡´ë·Î µ¹¾Æ¿Í
+	//return &m_MapInfo[x][y]; //ì™œ referenceë¡œ ë°›ì•˜ëƒ. ì¡°ì‘í•˜ë ¤ê³ . valueë¡œ ë°›ìœ¼ë©´ ë§µì¸í¬ë¥¼ ë°”ê¾¸ë©´ ë°”ë€Œì—ˆë‹¤ê°€ ì›ë˜ëŒ€ë¡œ ëŒì•„ì™€
 	if(x < 0 || x >= MAP_SIZE || y < 0 || y >= MAP_SIZE)
 		return nullptr;
 

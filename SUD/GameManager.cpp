@@ -20,24 +20,23 @@ CGameManager::~CGameManager(void)
 void CGameManager::Init()
 {
 	printf("[GAME START!]\n");
+
+	m_PlayerCharacter->SetInfo();
+	m_PlayerCharacter->PrintInfo();
+
 	srand((unsigned int)time(NULL));
 	CreateMonsters();
 
-	/*
-	Position pos;
-	pos.x = 5;
-	pos.y = 5;
-	m_PlayerCharacter->SetPosition(pos);
-	*/
-	m_PlayerCharacter->SetInfo();
-	m_PlayerCharacter->SetPosition(5,5);
-	m_PlayerCharacter->PrintInfo();
-	m_PlayerCharacter->PrintPosition(); // 프린트 인포 구현한 다음에 주석 처리할 것 
-
 }
-
+//string CGameManager::problemSet(int index)
+//{
+//	std::string a[25] ={ qwd}
+//	return a[index];
+//}
 void CGameManager::CreateMonsters()
 {
+// 	std::string a[25] ={ "문제1", };
+// 	int b[25] ={2, };
 	/*
 	for( int i = 0; i < 5 ; ++i)
 	{
@@ -66,9 +65,13 @@ void CGameManager::CreateMonsters()
 			pMonster->SetPosition(random_x, random_y);		
 			
 			m_Map.GetMapInfo(random_x, random_y)->pMonster = pMonster;
-
-			printf_s("Monster Name: %s   " , pMonster->GetName().c_str()); 
-			pMonster->PrintPosition();
+			//pMonster->m_a = a[i] 
+			//pMonster->m_a = this->problemSet(i);
+			//pMonster->aa();
+			
+			//for debugging 
+			/*printf_s("Monster Name: %s   " , pMonster->GetName().c_str()); 
+			pMonster->PrintPosition();*/
 			
 			totalMonster++;
 		}
@@ -78,29 +81,33 @@ void CGameManager::CreateMonsters()
 			--i;
 		}
 	}
-	/*
-	CMonster* pMonster = new CMonster;
-	pMonster->SetName("monster1");
-	m_Map.GetMapInfo(2,3)->pMonster = pMonster;
-	*/
-
 	printf_s("총 %d마리의 몬스터가 생성되었습니다.\n",totalMonster); 
 
 }
 
+//!!!!!!!!!!!!!!!!!!!!!compare to previous source code of mine!!!!!!!!!!!!!!!!!!!
 void CGameManager::CheckMap()
 {
-	Position currentPosition  = m_PlayerCharacter->GetPosition;
-	if(m_Map.GetMapInfo(currentPosition.x,currentPosition.y)->pMonster != NULL)
+	Position currentPosition  = m_PlayerCharacter->GetPosition();
+	MapInfo* pMapInfo = m_Map.GetMapInfo(currentPosition.x, currentPosition.y);
+	if(!pMapInfo)
+		return;
+
+	if(pMapInfo->pMonster)
 	{		
-		StartBattle(m_Map.GetMapInfo(currentPosition.x,currentPosition.y)->pMonster);
-		//간단하게 고칠것
+		StartBattle(pMapInfo->pMonster);
 	}
 }
 
 void CGameManager::StartBattle(CMonster* pMonster)
 {
-	
+	printf_s("해당 자리에 몬스터가 있(었)습니다\n");
+	while(m_PlayerCharacter->IsAlive() && pMonster->IsAlive())
+	{
+		printf_s("몬스터를 만났습니다\n");
+		pMonster->GiveProblem();
+	}
+
 }
 
 void CGameManager::Run()

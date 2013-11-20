@@ -1,10 +1,10 @@
-#include "stdafx.h"
+Ôªø#include "stdafx.h"
 #include "Character.h"
 #include "GameMap.h"
 
-//∏‚πˆ ∫Øºˆ∑Œ ¿ßƒ° ∏∏µÈ∞Ì
-//¿ßƒ° √‚∑¬«œ¥¬ «‘ºˆ ∏∏µÈ∞Ì
-//±◊∏Æ∞Ì ∞¢∞¢ ≈∞ ¿‘∑¬πﬁ¿∏∏È ¿ßƒ° ∞≈Ω√±‚
+//Î©§Î≤Ñ Î≥ÄÏàòÎ°ú ÏúÑÏπò ÎßåÎì§Í≥†
+//ÏúÑÏπò Ï∂úÎ†•ÌïòÎäî Ìï®Ïàò ÎßåÎì§Í≥†
+//Í∑∏Î¶¨Í≥† Í∞ÅÍ∞Å ÌÇ§ ÏûÖÎ†•Î∞õÏúºÎ©¥ ÏúÑÏπò Í±∞ÏãúÍ∏∞
 
 CCharacter::CCharacter(void)
 {
@@ -15,14 +15,18 @@ CCharacter::CCharacter(void)
 CCharacter::~CCharacter(void)
 {
 }
+//void CCharacter::aa()
+//{
+//
+//}
 
 Position CCharacter::Move(DIRECTION dir)
 {
 	switch(dir)
 	{
 	case DIR_UP:
-		//++m_position.y; //¿¸¿ß ø¨ªÍ¿∫ ª©∞Ì π›»Ø, »ƒ¿ß¥¬ π›»Ø«œ∞Ì ª©. æ’¿« ∞Õ¿Ã ¥ı ∏ﬁ∏∏Æ »ø¿≤¿Ã.. µ—¥Ÿ ∞ËªÍ¿Ã µ«±‰ «ÿ 
-		//m_position.y = m_position.y > 1 ? --m_position.y : m_position.y; //ªÔ«◊ ø¨ªÍ¿⁄
+		//++m_position.y; //Ï†ÑÏúÑ Ïó∞ÏÇ∞ÏùÄ ÎπºÍ≥† Î∞òÌôò, ÌõÑÏúÑÎäî Î∞òÌôòÌïòÍ≥† Îπº. ÏïûÏùò Í≤ÉÏù¥ Îçî Î©îÎ™®Î¶¨ Ìö®Ïú®Ïù¥.. ÎëòÎã§ Í≥ÑÏÇ∞Ïù¥ ÎêòÍ∏¥ Ìï¥ 
+		//m_position.y = m_position.y > 1 ? --m_position.y : m_position.y; //ÏÇºÌï≠ Ïó∞ÏÇ∞Ïûê
 		m_position.y = __max(m_position.y - 1, 0);
 		break;
 	case DIR_DOWN:
@@ -49,10 +53,24 @@ void CCharacter::SetPosition(int x, int y)
 	SetPosition(pos);
 }
 
+void CCharacter::InitExp()
+{
+	m_info.current_exp = 0;
+	m_info.total_exp = 25;
+}
+
+void CCharacter::InitPosition()
+{
+	Position pos;
+	pos.x = 5;
+	pos.y = 5;
+	SetPosition(pos);
+}
+
 
 void CCharacter::PrintPosition()
 {
-	printf_s("position : [%d, %d] \n", m_position.x, m_position.y);	
+	printf_s("[position : (%d, %d) ] \n", m_position.x, m_position.y);	
 }
 
 //void CCharacter::HitCheck(AttackResult result, int damage)
@@ -60,7 +78,7 @@ void CCharacter::PrintPosition()
 //	switch (result)
 //	{
 //	case Attack_HIT:
-//		printf_s("%s∞° (%d)¿« «««ÿ∏¶ ¿‘æ˙¥Ÿ", GetName().c_str(), damage);
+//		printf_s("%sÍ∞Ä (%d)Ïùò ÌîºÌï¥Î•º ÏûÖÏóàÎã§", GetName().c_str(), damage);
 //		m_HP -= damage;
 //		break;
 //	case Attack_MISS:

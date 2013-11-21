@@ -61,9 +61,13 @@ void CPlayerCharacter::CheckLevel(int current_exp)
 	}
 	else
 	{
+		printf_s("============================================\n");
+		printf_s("============================================\n");
 		printf_s("[level : %d ] \n", m_info.level);
 		printf_s("[exp : %d / %d ] \n", m_info.current_exp, m_info.total_exp);
-		printf_s("(%d exp) to level up", 5-(current_exp % 5));
+		printf_s("(%d exp) to level up\n", 5-(current_exp % 5));
+		printf_s("============================================\n");
+		printf_s("============================================\n");
 	}
 }
 

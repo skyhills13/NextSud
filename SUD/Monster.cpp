@@ -49,8 +49,3 @@ Info CMonster::Attacked( AttackResult attack_result )
 
 	return m_info;
 }
-
-//void CMonster::aa()
-//{
-//	printf("@@@@@@@@@@@@@@@@@@@@ %s\n",m_a.c_str());
-//}

@@ -5,7 +5,7 @@
 #include <time.h>
 #include <synchapi.h>
 
-
+//array for lang
 std::string question[25] = {
 	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
 	"4byte 짜리 숫자 자료형은?\n",
@@ -34,31 +34,31 @@ std::string question[25] = {
 	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
 };
 std::string options[25]= { 
-	"(1) ; (2) : (3) . (4) / (5) 모르겠다 \n",
-	"(1) char (2) short (3) int (4) long (5) 모르겠다 \n",
-	"(1) eclipse (2) virtualbox (3) sublime text (4) xcode (5) 모르겠다\n",
-	"(1) ; (2) : (3) . (4) / (5) 모르겠다 \n",
-	"(1) char (2) short (3) int (4) long (5) 모르겠다 \n",
-	"(1) eclipse (2) virtualbox (3) sublime text (4) xcode (5) 모르겠다\n",
-	"(1) ; (2) : (3) . (4) / (5) 모르겠다 \n",
-	"(1) char (2) short (3) int (4) long (5) 모르겠다 \n",
-	"(1) eclipse (2) virtualbox (3) sublime text (4) xcode (5) 모르겠다\n",
-	"(1) ; (2) : (3) . (4) / (5) 모르겠다 \n",
-	"(1) char (2) short (3) int (4) long (5) 모르겠다 \n",
-	"(1) eclipse (2) virtualbox (3) sublime text (4) xcode (5) 모르겠다\n",
-	"(1) ; (2) : (3) . (4) / (5) 모르겠다 \n",
-	"(1) char (2) short (3) int (4) long (5) 모르겠다 \n",
-	"(1) eclipse (2) virtualbox (3) sublime text (4) xcode (5) 모르겠다\n",
-	"(1) ; (2) : (3) . (4) / (5) 모르겠다 \n",
-	"(1) char (2) short (3) int (4) long (5) 모르겠다 \n",
-	"(1) eclipse (2) virtualbox (3) sublime text (4) xcode (5) 모르겠다\n",
-	"(1) ; (2) : (3) . (4) / (5) 모르겠다 \n",
-	"(1) char (2) short (3) int (4) long (5) 모르겠다 \n",
-	"(1) eclipse (2) virtualbox (3) sublime text (4) xcode (5) 모르겠다\n",
-	"(1) ; (2) : (3) . (4) / (5) 모르겠다 \n",
-	"(1) char (2) short (3) int (4) long (5) 모르겠다 \n",
-	"(1) eclipse (2) virtualbox (3) sublime text (4) xcode (5) 모르겠다\n",
-	"(1) ; (2) : (3) . (4) / (5) 모르겠다 \n"
+	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",//make for loop for number 5 option
+	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
+	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
+	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
+	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
+	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
+	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
+	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
+	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
+	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
+	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
+	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
+	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
+	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
+	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
+	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
+	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
+	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
+	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
+	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
+	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
+	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
+	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
+	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
+	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n"
 };
 
 
@@ -89,62 +89,7 @@ void CGameManager::Init()
 //make it as printf_s
 //void CGameManager::MakeProblemSet()
 //{
-//	//how to make it better (stl?)
-//	//or ask prof
-//	std::string question[25] = {
-//		"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
-//		"4byte 짜리 숫자 자료형은?\n",
-//		"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-//		"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
-//		"4byte 짜리 숫자 자료형은?\n",
-//		"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-//		"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
-//		"4byte 짜리 숫자 자료형은?\n",
-//		"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-//		"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
-//		"4byte 짜리 숫자 자료형은?\n",
-//		"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-//		"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
-//		"4byte 짜리 숫자 자료형은?\n",
-//		"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-//		"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
-//		"4byte 짜리 숫자 자료형은?\n",
-//		"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-//		"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
-//		"4byte 짜리 숫자 자료형은?\n",
-//		"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-//		"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
-//		"4byte 짜리 숫자 자료형은?\n",
-//		"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-//		"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-//	};
-//	std::string options[25]= { 
-//		"(1) ; (2) : (3) . (4) / (5) 모르겠다 \n",
-//		"(1) char (2) short (3) int (4) long (5) 모르겠다 \n",
-//		"(1) eclipse (2) virtualbox (3) sublime text (4) xcode (5) 모르겠다\n",
-//		"(1) ; (2) : (3) . (4) / (5) 모르겠다 \n",
-//		"(1) char (2) short (3) int (4) long (5) 모르겠다 \n",
-//		"(1) eclipse (2) virtualbox (3) sublime text (4) xcode (5) 모르겠다\n",
-//		"(1) ; (2) : (3) . (4) / (5) 모르겠다 \n",
-//		"(1) char (2) short (3) int (4) long (5) 모르겠다 \n",
-//		"(1) eclipse (2) virtualbox (3) sublime text (4) xcode (5) 모르겠다\n",
-//		"(1) ; (2) : (3) . (4) / (5) 모르겠다 \n",
-//		"(1) char (2) short (3) int (4) long (5) 모르겠다 \n",
-//		"(1) eclipse (2) virtualbox (3) sublime text (4) xcode (5) 모르겠다\n",
-//		"(1) ; (2) : (3) . (4) / (5) 모르겠다 \n",
-//		"(1) char (2) short (3) int (4) long (5) 모르겠다 \n",
-//		"(1) eclipse (2) virtualbox (3) sublime text (4) xcode (5) 모르겠다\n",
-//		"(1) ; (2) : (3) . (4) / (5) 모르겠다 \n",
-//		"(1) char (2) short (3) int (4) long (5) 모르겠다 \n",
-//		"(1) eclipse (2) virtualbox (3) sublime text (4) xcode (5) 모르겠다\n",
-//		"(1) ; (2) : (3) . (4) / (5) 모르겠다 \n",
-//		"(1) char (2) short (3) int (4) long (5) 모르겠다 \n",
-//		"(1) eclipse (2) virtualbox (3) sublime text (4) xcode (5) 모르겠다\n",
-//		"(1) ; (2) : (3) . (4) / (5) 모르겠다 \n",
-//		"(1) char (2) short (3) int (4) long (5) 모르겠다 \n",
-//		"(1) eclipse (2) virtualbox (3) sublime text (4) xcode (5) 모르겠다\n",
-//		"(1) ; (2) : (3) . (4) / (5) 모르겠다 \n"
-//		};
+
 //}
 
 void CGameManager::CreateMonsters()
@@ -178,6 +123,7 @@ void CGameManager::CreateMonsters()
 			
 			m_Map.GetMapInfo(random_x, random_y)->pMonster = pMonster;
 			
+			pMonster->InitHP();
 			pMonster->SetIndex(i);
 			pMonster->SetQuestion(question[i]);
 			pMonster->SetOptions(options[i]);
@@ -215,9 +161,10 @@ void CGameManager::CheckMap()
 
 void CGameManager::StartBattle(CMonster* pMonster)
 {
-	printf_s("해당 자리에 몬스터가 있(었)습니다\n");
+	printf_s("해당 자리에 몬스터가 있(었)습니다\n");//for debug
 	while(m_PlayerCharacter->IsAlive() && pMonster->IsAlive())
 	{
+		
 		printf_s("몬스터를 만났습니다\n");
 		pMonster->GiveProblem();
 		std::string str_input_answer;
@@ -229,35 +176,45 @@ void CGameManager::StartBattle(CMonster* pMonster)
 		if(((pMonster->GetIndex())% 4)+1 == atoi(input_answer.c_str()))*/
 		if(player_answer==1) //for easy debugging
 		{
+			printf_s("############\n");
 			printf_s("정답입니다\n");
+			printf_s("############\n");
 			m_PlayerCharacter->Attacked(ATTACK_SUCCESS);
 			pMonster->Attacked(ATTACK_FAIL);
 		}
 		else if( player_answer == 0 ) 
 		{
+			printf_s("############\n");
 			printf_s("얼레리 꼴레리\n");
-			
+			printf_s("############\n");	
 		}
 		else if( player_answer == 5 )
 		{
+			printf_s("############\n");
 			printf_s("힌트 줄까?\n");
-		}else //exception처리 6,7,8,9 눌렀을때
+			printf_s("############\n");
+		}
+		else //exception처리 6,7,8,9 눌렀을때
 		{
+			printf_s("############\n");
 			printf_s("틀렸어\n");
+			printf_s("############\n");
 			m_PlayerCharacter->Attacked(ATTACK_FAIL);
 			pMonster->Attacked(ATTACK_SUCCESS);
 		}
 
 		if(!m_PlayerCharacter->IsAlive())
 		{
+			printf_s("############\n");
 			printf_s("캐릭터가 죽었습니다. 공부를 조금 더 합시다\n");
-			break;
+			printf_s("############\n");
 		}
 
 		if(!pMonster->IsAlive())
 		{
+			printf_s("############\n");
 			printf_s("몬스터가 죽었습니다\n");
-			break;
+			printf_s("############\n");
 		}
 
 		Sleep(1000); //why?
@@ -272,10 +229,6 @@ void CGameManager::StartBattle(CMonster* pMonster)
 
 	printf_s("============================================\n");
 	printf_s("============================================\n");
-
-
-	
-
 }
 
 void CGameManager::Run()

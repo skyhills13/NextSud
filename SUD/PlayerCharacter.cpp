@@ -67,5 +67,30 @@ void CPlayerCharacter::CheckLevel(int current_exp)
 	}
 }
 
+//1.should this return type be Info? why can't it be just void
+//1. why it has an error when I declare it on character.h
+Info CPlayerCharacter::Attacked( AttackResult attack_result)
+{
+	switch(attack_result)
+	{
+	case ATTACK_SUCCESS:
+	++m_info.current_exp;
+	CheckLevel(m_info.current_exp);
+
+	//make planned attributes
+	case ATTACK_FAIL:
+	break;
+
+	case DEFENSE:
+	break;
+
+	case RUN:
+	break;
+	}
+	
+	return m_info;
+
+}
+
 
 

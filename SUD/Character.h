@@ -2,13 +2,14 @@
 #define TOTAL_EXP 25
 #define LEVELUP_EXP 5 // level up every 5 exp to 
 
-
 struct Position 
 {
 	int x;
 	int y;
 };
 
+//when refactoring
+//set this structure in the playercharacter class
 struct Info
 {
 	std::string name;
@@ -29,6 +30,13 @@ enum DIRECTION
 	DIR_RIGHT
 };
 
+enum AttackResult
+{
+	ATTACK_SUCCESS,
+	ATTACK_FAIL,
+	DEFENSE,
+	RUN
+};
 
 class CCharacter
 {
@@ -52,7 +60,7 @@ public:
 	std::string GetLang(){return m_info.lang;}
 
 	void SetHP(int HP){m_info.hp = HP;}
-	
+
 	int GetHP(){return m_info.hp;}
 
 	void SetLevel(int level){m_info.level = level;}
@@ -65,9 +73,9 @@ public:
 	int GetExp(){return m_info.current_exp;}
 
 	bool IsAlive(){return m_info.hp > 0;}
-	//void HitCheck(AttackResult result, int damage);
 
-	virtual void aa();
+	//what is it for?
+	//virtual void aa();
 
 protected:
 	Position m_position;

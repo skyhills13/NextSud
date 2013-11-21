@@ -17,6 +17,7 @@ protected:
 	void CreateMonsters();
 	void CheckMap();
 	void StartBattle(CMonster* pMonster);
+	//void MakeProblemSet();
 
 protected:
 	CGameMap m_Map;

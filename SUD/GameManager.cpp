@@ -148,19 +148,30 @@ void CGameManager::CreateMonsters()
 //!!!!!!!!!!!!!!!!!!!!!compare to previous source code of mine!!!!!!!!!!!!!!!!!!!
 void CGameManager::CheckMap()
 {
+
 	Position currentPosition  = m_PlayerCharacter->GetPosition();
 	MapInfo* pMapInfo = m_Map.GetMapInfo(currentPosition.x, currentPosition.y);
 	if(!pMapInfo)
 		return;
 
-	if(pMapInfo->pMonster)
-	{		
+	if(pMapInfo->pMonster && pMapInfo -> pMonster -> IsAlive())
+	//if(pMapInfo->pMonster)
+	{
 		StartBattle(pMapInfo->pMonster);
+		//BattleResult result =StartBattle();
+		//warmth of the body printf
+
 	}
 }
 
 void CGameManager::StartBattle(CMonster* pMonster)
 {
+	//BattleResult battleResult;
+	
+	//CMonster* pMonster to pMapInfo
+	//delete pMapInfo->pMonster;
+	//pMapInfo -> pMonster = nullptr;
+
 	printf_s("해당 자리에 몬스터가 있(었)습니다\n");//for debug
 	while(m_PlayerCharacter->IsAlive() && pMonster->IsAlive())
 	{
@@ -215,9 +226,11 @@ void CGameManager::StartBattle(CMonster* pMonster)
 			printf_s("############\n");
 			printf_s("몬스터가 죽었습니다\n");
 			printf_s("############\n");
+			//battleResult = BATTLE_WIN;
 		}
 
-		Sleep(1000); //why?
+		Sleep(1000); //why? to look like it's game. 
+					//print lines with the term of 1 second
 	}
 	
 	printf_s("============================================\n");

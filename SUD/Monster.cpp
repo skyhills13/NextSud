@@ -37,7 +37,7 @@ Info CMonster::Attacked( AttackResult attack_result )
 		}
 		else
 		{
-			//delete object
+			
 		}
 
 	case DEFENSE:

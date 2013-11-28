@@ -2,6 +2,13 @@
 #include "GameMap.h"
 #include "PlayerCharacter.h"
 
+
+enum BattleResult
+{
+	BATTLE_WIN,
+	BATTLE_LOSE
+};
+
 class CGameManager
 {
 public:

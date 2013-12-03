@@ -93,7 +93,6 @@
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameMap.cpp" />
     <ClCompile Include="Monster.cpp" />
-    <ClCompile Include="PbSetManager.cpp" />
     <ClCompile Include="PlayerCharacter.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

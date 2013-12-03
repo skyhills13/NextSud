@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "GameManager.h"
 #include <stdio.h>
 #include "Character.h"
@@ -7,58 +7,58 @@
 
 //array for lang
 std::string question[25] = {
-	"ÇÁ·Î±×·¡¹Ö ¾ğ¾î¿¡¼­ ¸¶Ä§Ç¥ ¿ªÇÒÀ» ÇÏ´Â °ÍÀº?\n",
-	"4byte Â¥¸® ¼ıÀÚ ÀÚ·áÇüÀº?\n",
-	"´ÙÀ½ Áß visual studio¿Í ºñ½ÁÇÑ ¿ªÇÒÀ» ÇÏ´Â°ÍÀÌ ¾Æ´Ñ°ÍÀº?\n",
-	"ÇÁ·Î±×·¡¹Ö ¾ğ¾î¿¡¼­ ¸¶Ä§Ç¥ ¿ªÇÒÀ» ÇÏ´Â °ÍÀº?\n",
-	"4byte Â¥¸® ¼ıÀÚ ÀÚ·áÇüÀº?\n",
-	"´ÙÀ½ Áß visual studio¿Í ºñ½ÁÇÑ ¿ªÇÒÀ» ÇÏ´Â°ÍÀÌ ¾Æ´Ñ°ÍÀº?\n",
-	"ÇÁ·Î±×·¡¹Ö ¾ğ¾î¿¡¼­ ¸¶Ä§Ç¥ ¿ªÇÒÀ» ÇÏ´Â °ÍÀº?\n",
-	"4byte Â¥¸® ¼ıÀÚ ÀÚ·áÇüÀº?\n",
-	"´ÙÀ½ Áß visual studio¿Í ºñ½ÁÇÑ ¿ªÇÒÀ» ÇÏ´Â°ÍÀÌ ¾Æ´Ñ°ÍÀº?\n",
-	"ÇÁ·Î±×·¡¹Ö ¾ğ¾î¿¡¼­ ¸¶Ä§Ç¥ ¿ªÇÒÀ» ÇÏ´Â °ÍÀº?\n",
-	"4byte Â¥¸® ¼ıÀÚ ÀÚ·áÇüÀº?\n",
-	"´ÙÀ½ Áß visual studio¿Í ºñ½ÁÇÑ ¿ªÇÒÀ» ÇÏ´Â°ÍÀÌ ¾Æ´Ñ°ÍÀº?\n",
-	"ÇÁ·Î±×·¡¹Ö ¾ğ¾î¿¡¼­ ¸¶Ä§Ç¥ ¿ªÇÒÀ» ÇÏ´Â °ÍÀº?\n",
-	"4byte Â¥¸® ¼ıÀÚ ÀÚ·áÇüÀº?\n",
-	"´ÙÀ½ Áß visual studio¿Í ºñ½ÁÇÑ ¿ªÇÒÀ» ÇÏ´Â°ÍÀÌ ¾Æ´Ñ°ÍÀº?\n",
-	"ÇÁ·Î±×·¡¹Ö ¾ğ¾î¿¡¼­ ¸¶Ä§Ç¥ ¿ªÇÒÀ» ÇÏ´Â °ÍÀº?\n",
-	"4byte Â¥¸® ¼ıÀÚ ÀÚ·áÇüÀº?\n",
-	"´ÙÀ½ Áß visual studio¿Í ºñ½ÁÇÑ ¿ªÇÒÀ» ÇÏ´Â°ÍÀÌ ¾Æ´Ñ°ÍÀº?\n",
-	"ÇÁ·Î±×·¡¹Ö ¾ğ¾î¿¡¼­ ¸¶Ä§Ç¥ ¿ªÇÒÀ» ÇÏ´Â °ÍÀº?\n",
-	"4byte Â¥¸® ¼ıÀÚ ÀÚ·áÇüÀº?\n",
-	"´ÙÀ½ Áß visual studio¿Í ºñ½ÁÇÑ ¿ªÇÒÀ» ÇÏ´Â°ÍÀÌ ¾Æ´Ñ°ÍÀº?\n",
-	"ÇÁ·Î±×·¡¹Ö ¾ğ¾î¿¡¼­ ¸¶Ä§Ç¥ ¿ªÇÒÀ» ÇÏ´Â °ÍÀº?\n",
-	"4byte Â¥¸® ¼ıÀÚ ÀÚ·áÇüÀº?\n",
-	"´ÙÀ½ Áß visual studio¿Í ºñ½ÁÇÑ ¿ªÇÒÀ» ÇÏ´Â°ÍÀÌ ¾Æ´Ñ°ÍÀº?\n",
-	"´ÙÀ½ Áß visual studio¿Í ºñ½ÁÇÑ ¿ªÇÒÀ» ÇÏ´Â°ÍÀÌ ¾Æ´Ñ°ÍÀº?\n",
+	"í”„ë¡œê·¸ë˜ë° ì–¸ì–´ì—ì„œ ë§ˆì¹¨í‘œ ì—­í• ì„ í•˜ëŠ” ê²ƒì€?\n",
+	"4byte ì§œë¦¬ ìˆ«ì ìë£Œí˜•ì€?\n",
+	"ë‹¤ìŒ ì¤‘ visual studioì™€ ë¹„ìŠ·í•œ ì—­í• ì„ í•˜ëŠ”ê²ƒì´ ì•„ë‹Œê²ƒì€?\n",
+	"í”„ë¡œê·¸ë˜ë° ì–¸ì–´ì—ì„œ ë§ˆì¹¨í‘œ ì—­í• ì„ í•˜ëŠ” ê²ƒì€?\n",
+	"4byte ì§œë¦¬ ìˆ«ì ìë£Œí˜•ì€?\n",
+	"ë‹¤ìŒ ì¤‘ visual studioì™€ ë¹„ìŠ·í•œ ì—­í• ì„ í•˜ëŠ”ê²ƒì´ ì•„ë‹Œê²ƒì€?\n",
+	"í”„ë¡œê·¸ë˜ë° ì–¸ì–´ì—ì„œ ë§ˆì¹¨í‘œ ì—­í• ì„ í•˜ëŠ” ê²ƒì€?\n",
+	"4byte ì§œë¦¬ ìˆ«ì ìë£Œí˜•ì€?\n",
+	"ë‹¤ìŒ ì¤‘ visual studioì™€ ë¹„ìŠ·í•œ ì—­í• ì„ í•˜ëŠ”ê²ƒì´ ì•„ë‹Œê²ƒì€?\n",
+	"í”„ë¡œê·¸ë˜ë° ì–¸ì–´ì—ì„œ ë§ˆì¹¨í‘œ ì—­í• ì„ í•˜ëŠ” ê²ƒì€?\n",
+	"4byte ì§œë¦¬ ìˆ«ì ìë£Œí˜•ì€?\n",
+	"ë‹¤ìŒ ì¤‘ visual studioì™€ ë¹„ìŠ·í•œ ì—­í• ì„ í•˜ëŠ”ê²ƒì´ ì•„ë‹Œê²ƒì€?\n",
+	"í”„ë¡œê·¸ë˜ë° ì–¸ì–´ì—ì„œ ë§ˆì¹¨í‘œ ì—­í• ì„ í•˜ëŠ” ê²ƒì€?\n",
+	"4byte ì§œë¦¬ ìˆ«ì ìë£Œí˜•ì€?\n",
+	"ë‹¤ìŒ ì¤‘ visual studioì™€ ë¹„ìŠ·í•œ ì—­í• ì„ í•˜ëŠ”ê²ƒì´ ì•„ë‹Œê²ƒì€?\n",
+	"í”„ë¡œê·¸ë˜ë° ì–¸ì–´ì—ì„œ ë§ˆì¹¨í‘œ ì—­í• ì„ í•˜ëŠ” ê²ƒì€?\n",
+	"4byte ì§œë¦¬ ìˆ«ì ìë£Œí˜•ì€?\n",
+	"ë‹¤ìŒ ì¤‘ visual studioì™€ ë¹„ìŠ·í•œ ì—­í• ì„ í•˜ëŠ”ê²ƒì´ ì•„ë‹Œê²ƒì€?\n",
+	"í”„ë¡œê·¸ë˜ë° ì–¸ì–´ì—ì„œ ë§ˆì¹¨í‘œ ì—­í• ì„ í•˜ëŠ” ê²ƒì€?\n",
+	"4byte ì§œë¦¬ ìˆ«ì ìë£Œí˜•ì€?\n",
+	"ë‹¤ìŒ ì¤‘ visual studioì™€ ë¹„ìŠ·í•œ ì—­í• ì„ í•˜ëŠ”ê²ƒì´ ì•„ë‹Œê²ƒì€?\n",
+	"í”„ë¡œê·¸ë˜ë° ì–¸ì–´ì—ì„œ ë§ˆì¹¨í‘œ ì—­í• ì„ í•˜ëŠ” ê²ƒì€?\n",
+	"4byte ì§œë¦¬ ìˆ«ì ìë£Œí˜•ì€?\n",
+	"ë‹¤ìŒ ì¤‘ visual studioì™€ ë¹„ìŠ·í•œ ì—­í• ì„ í•˜ëŠ”ê²ƒì´ ì•„ë‹Œê²ƒì€?\n",
+	"ë‹¤ìŒ ì¤‘ visual studioì™€ ë¹„ìŠ·í•œ ì—­í• ì„ í•˜ëŠ”ê²ƒì´ ì•„ë‹Œê²ƒì€?\n",
 };
 std::string options[25]= { 
-	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) ¸ğ¸£°Ú´Ù \n",//make for loop for number 5 option
-	"(1) char \n(2) short \n(3) int \n(4) long \n(5) ¸ğ¸£°Ú´Ù \n",
-	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) ¸ğ¸£°Ú´Ù\n",
-	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) ¸ğ¸£°Ú´Ù \n",
-	"(1) char \n(2) short \n(3) int \n(4) long \n(5) ¸ğ¸£°Ú´Ù \n",
-	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) ¸ğ¸£°Ú´Ù\n",
-	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) ¸ğ¸£°Ú´Ù \n",
-	"(1) char \n(2) short \n(3) int \n(4) long \n(5) ¸ğ¸£°Ú´Ù \n",
-	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) ¸ğ¸£°Ú´Ù\n",
-	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) ¸ğ¸£°Ú´Ù \n",
-	"(1) char \n(2) short \n(3) int \n(4) long \n(5) ¸ğ¸£°Ú´Ù \n",
-	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) ¸ğ¸£°Ú´Ù\n",
-	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) ¸ğ¸£°Ú´Ù \n",
-	"(1) char \n(2) short \n(3) int \n(4) long \n(5) ¸ğ¸£°Ú´Ù \n",
-	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) ¸ğ¸£°Ú´Ù\n",
-	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) ¸ğ¸£°Ú´Ù \n",
-	"(1) char \n(2) short \n(3) int \n(4) long \n(5) ¸ğ¸£°Ú´Ù \n",
-	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) ¸ğ¸£°Ú´Ù\n",
-	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) ¸ğ¸£°Ú´Ù \n",
-	"(1) char \n(2) short \n(3) int \n(4) long \n(5) ¸ğ¸£°Ú´Ù \n",
-	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) ¸ğ¸£°Ú´Ù\n",
-	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) ¸ğ¸£°Ú´Ù \n",
-	"(1) char \n(2) short \n(3) int \n(4) long \n(5) ¸ğ¸£°Ú´Ù \n",
-	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) ¸ğ¸£°Ú´Ù\n",
-	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) ¸ğ¸£°Ú´Ù\n"
+	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) ëª¨ë¥´ê² ë‹¤ \n",//make for loop for number 5 option
+	"(1) char \n(2) short \n(3) int \n(4) long \n(5) ëª¨ë¥´ê² ë‹¤ \n",
+	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) ëª¨ë¥´ê² ë‹¤\n",
+	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) ëª¨ë¥´ê² ë‹¤ \n",
+	"(1) char \n(2) short \n(3) int \n(4) long \n(5) ëª¨ë¥´ê² ë‹¤ \n",
+	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) ëª¨ë¥´ê² ë‹¤\n",
+	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) ëª¨ë¥´ê² ë‹¤ \n",
+	"(1) char \n(2) short \n(3) int \n(4) long \n(5) ëª¨ë¥´ê² ë‹¤ \n",
+	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) ëª¨ë¥´ê² ë‹¤\n",
+	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) ëª¨ë¥´ê² ë‹¤ \n",
+	"(1) char \n(2) short \n(3) int \n(4) long \n(5) ëª¨ë¥´ê² ë‹¤ \n",
+	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) ëª¨ë¥´ê² ë‹¤\n",
+	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) ëª¨ë¥´ê² ë‹¤ \n",
+	"(1) char \n(2) short \n(3) int \n(4) long \n(5) ëª¨ë¥´ê² ë‹¤ \n",
+	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) ëª¨ë¥´ê² ë‹¤\n",
+	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) ëª¨ë¥´ê² ë‹¤ \n",
+	"(1) char \n(2) short \n(3) int \n(4) long \n(5) ëª¨ë¥´ê² ë‹¤ \n",
+	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) ëª¨ë¥´ê² ë‹¤\n",
+	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) ëª¨ë¥´ê² ë‹¤ \n",
+	"(1) char \n(2) short \n(3) int \n(4) long \n(5) ëª¨ë¥´ê² ë‹¤ \n",
+	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) ëª¨ë¥´ê² ë‹¤\n",
+	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) ëª¨ë¥´ê² ë‹¤ \n",
+	"(1) char \n(2) short \n(3) int \n(4) long \n(5) ëª¨ë¥´ê² ë‹¤ \n",
+	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) ëª¨ë¥´ê² ë‹¤\n",
+	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) ëª¨ë¥´ê² ë‹¤\n"
 };
 
 
@@ -141,7 +141,7 @@ void CGameManager::CreateMonsters()
 			--i;
 		}
 	}
-	printf_s("ÃÑ %d¸¶¸®ÀÇ ¸ó½ºÅÍ°¡ »ı¼ºµÇ¾ú½À´Ï´Ù.\n",totalMonster); 
+	printf_s("ì´ %dë§ˆë¦¬ì˜ ëª¬ìŠ¤í„°ê°€ ìƒì„±ë˜ì—ˆìŠµë‹ˆë‹¤.\n",totalMonster); 
 
 }
 
@@ -172,11 +172,11 @@ void CGameManager::StartBattle(CMonster* pMonster)
 	//delete pMapInfo->pMonster;
 	//pMapInfo -> pMonster = nullptr;
 
-	printf_s("ÇØ´ç ÀÚ¸®¿¡ ¸ó½ºÅÍ°¡ ÀÖ(¾ú)½À´Ï´Ù\n");//for debug
+	printf_s("í•´ë‹¹ ìë¦¬ì— ëª¬ìŠ¤í„°ê°€ ìˆ(ì—ˆ)ìŠµë‹ˆë‹¤\n");//for debug
 	while(m_PlayerCharacter->IsAlive() && pMonster->IsAlive())
 	{
 		
-		printf_s("¸ó½ºÅÍ¸¦ ¸¸³µ½À´Ï´Ù\n");
+		printf_s("ëª¬ìŠ¤í„°ë¥¼ ë§Œë‚¬ìŠµë‹ˆë‹¤\n");
 		pMonster->GiveProblem();
 		std::string str_input_answer;
 		getline(std::cin,str_input_answer); //change it to int type for efficiency
@@ -188,27 +188,29 @@ void CGameManager::StartBattle(CMonster* pMonster)
 		if(player_answer==1) //for easy debugging
 		{
 			printf_s("############\n");
-			printf_s("Á¤´äÀÔ´Ï´Ù\n");
+			printf_s("ì •ë‹µì…ë‹ˆë‹¤\n");
 			printf_s("############\n");
+
+			// agebreak : AttackedëŠ” ê³µê²©ì„ ë‹¹í–ˆì„ë•Œ í˜¸ì¶œ í•´ì•¼ í•©ë‹ˆë‹¤. ë…¼ë¦¬ì ìœ¼ë¡œ ë§ì§€ ì•ŠìŠµë‹ˆë‹¤. ê°œì„ ì´ í•„ìš”í•´ ë³´ì…ë‹ˆë‹¤.
 			m_PlayerCharacter->Attacked(ATTACK_SUCCESS);
 			pMonster->Attacked(ATTACK_FAIL);
 		}
 		else if( player_answer == 0 ) 
 		{
 			printf_s("############\n");
-			printf_s("¾ó·¹¸® ²Ã·¹¸®\n");
+			printf_s("ì–¼ë ˆë¦¬ ê¼´ë ˆë¦¬\n");
 			printf_s("############\n");	
 		}
 		else if( player_answer == 5 )
 		{
 			printf_s("############\n");
-			printf_s("ÈùÆ® ÁÙ±î?\n");
+			printf_s("íŒíŠ¸ ì¤„ê¹Œ?\n");
 			printf_s("############\n");
 		}
-		else //exceptionÃ³¸® 6,7,8,9 ´­·¶À»¶§
+		else //exceptionì²˜ë¦¬ 6,7,8,9 ëˆŒë €ì„ë•Œ
 		{
 			printf_s("############\n");
-			printf_s("Æ²·È¾î\n");
+			printf_s("í‹€ë ¸ì–´\n");
 			printf_s("############\n");
 			m_PlayerCharacter->Attacked(ATTACK_FAIL);
 			pMonster->Attacked(ATTACK_SUCCESS);
@@ -217,14 +219,14 @@ void CGameManager::StartBattle(CMonster* pMonster)
 		if(!m_PlayerCharacter->IsAlive())
 		{
 			printf_s("############\n");
-			printf_s("Ä³¸¯ÅÍ°¡ Á×¾ú½À´Ï´Ù. °øºÎ¸¦ Á¶±İ ´õ ÇÕ½Ã´Ù\n");
+			printf_s("ìºë¦­í„°ê°€ ì£½ì—ˆìŠµë‹ˆë‹¤. ê³µë¶€ë¥¼ ì¡°ê¸ˆ ë” í•©ì‹œë‹¤\n");
 			printf_s("############\n");
 		}
 
 		if(!pMonster->IsAlive())
 		{
 			printf_s("############\n");
-			printf_s("¸ó½ºÅÍ°¡ Á×¾ú½À´Ï´Ù\n");
+			printf_s("ëª¬ìŠ¤í„°ê°€ ì£½ì—ˆìŠµë‹ˆë‹¤\n");
 			printf_s("############\n");
 			//battleResult = BATTLE_WIN;
 		}
@@ -260,15 +262,15 @@ void CGameManager::Release()
 
 bool CGameManager::InputProc()
 {
-	//Å°º¸µå ÀÔ·ÂÀ» ¹Ş¾Æ¼­ 
-	//Ä¿¸Çµå¸¦ ÆÄ½ÌÇÏ°í ½ÇÇàÇÑ´Ù.
-	//q¸¦ ÀÔ·Â¹ŞÀ¸¸é Á¾·áµÈ´Ù
+	//í‚¤ë³´ë“œ ì…ë ¥ì„ ë°›ì•„ì„œ 
+	//ì»¤ë§¨ë“œë¥¼ íŒŒì‹±í•˜ê³  ì‹¤í–‰í•œë‹¤.
+	//që¥¼ ì…ë ¥ë°›ìœ¼ë©´ ì¢…ë£Œëœë‹¤
 	
 	std::string strInput;
 	/*
 	char quitKey1 = 'q';
 	char quitKey2 = 'Q';*/
-	printf_s("¿øÇÏ´Â Å°¸¦ ÀÔ·ÂÇÏ¼¼¿ä\n");
+	printf_s("ì›í•˜ëŠ” í‚¤ë¥¼ ì…ë ¥í•˜ì„¸ìš”\n");
 	getline(std::cin, strInput);
 	printf_s("INPUT:%s\n",strInput.c_str());
 	

@@ -1,8 +1,9 @@
-// inclass.cpp : ÄÜ¼Ö ÀÀ¿ë ÇÁ·Î±×·¥¿¡ ´ëÇÑ ÁøÀÔÁ¡À» Á¤ÀÇÇÕ´Ï´Ù.
+ï»¿// inclass.cpp : ì½˜ì†” ì‘ìš© í”„ë¡œê·¸ë¨ì— ëŒ€í•œ ì§„ì…ì ì„ ì •ì˜í•©ë‹ˆë‹¤.
 //
 
 #include "stdafx.h"
 #include "Character.h"
+#include <crtdbg.h>
 
 void TestValue1(){
 	CCharacter player;
@@ -25,7 +26,7 @@ void TestValue2(){
 	party[0].SetHP(111);
 	soeun.PrintHP();
 
-	//ÇÁ·Î±×·¥¿¡¼­ Á¸ÀçÇÏ´Â °´Ã¼ °ªÀÌ ÃÑ 6°³°¡ µÇ
+	//í”„ë¡œê·¸ë¨ì—ì„œ ì¡´ì¬í•˜ëŠ” ê°ì²´ ê°’ì´ ì´ 6ê°œê°€ ë˜
 
 }
 
@@ -40,7 +41,7 @@ void TestValue3()
 {
 	CCharacter gunHee;
 	gunHee.SetHP(1);
-	Heal(gunHee); //gunhee°¡ µé¾î°£°Ô ¾Æ´Ï¶ó, gunheeÀÇ Å¬·ĞÀÌ µé¾î°£°Å¾ß. ±×·¡¼­ ÈúÀÌ ¾ÈµÊ
+	Heal(gunHee); //gunheeê°€ ë“¤ì–´ê°„ê²Œ ì•„ë‹ˆë¼, gunheeì˜ í´ë¡ ì´ ë“¤ì–´ê°„ê±°ì•¼. ê·¸ë˜ì„œ íì´ ì•ˆë¨
 	gunHee.PrintHP();
 
 }
@@ -122,7 +123,7 @@ void TestPointer_4()
 
 
 	delete pPlayer1;
-	//delete pPlayer2;//ÇÑ¹ø ÇØÁ¦Çß´Âµ¥ ¶Ç ÇØÁ¦ÇØ¼­ ·±Å¸ÀÓ ¿¡¶ó
+	//delete pPlayer2;//í•œë²ˆ í•´ì œí–ˆëŠ”ë° ë˜ í•´ì œí•´ì„œ ëŸ°íƒ€ì„ ì—ë¼
 
 }
 
@@ -140,18 +141,59 @@ void TestValuePointer()
 	CCharacter player; //value
 	player.SetHP(888);
 
-	CCharacter*pPlayer = &player; //value->pointer //player°¡ ¹ë·ù±â¶§¹®¿¡ µô¸®Æ® ¾ÈÇØÁàµµµÇ
+	CCharacter*pPlayer = &player; //value->pointer //playerê°€ ë°¸ë¥˜ê¸°ë•Œë¬¸ì— ë”œë¦¬íŠ¸ ì•ˆí•´ì¤˜ë„ë˜
 	pPlayer->PrintHP();
 
 	CCharacter player2 = *pPlayer;//pointer->value 
 	player2.PrintHP();
 }
 
+void Exam1()
+{
+	CCharacter* pSoeun = new CCharacter();
+	delete pSoeun;
+	pSoeun = nullptr; //ì´ ë¶€ë¶„ì´ ì—†ìœ¼ë©´ ëŸ°íƒ€ì„ ì—ëŸ¬
+	delete pSoeun; //nullptrì€ ì‚­ì œí•  ìˆ˜ ìˆì–´ì„œ ê°€ëŠ¥
+	//ê·¸ë˜ì„œ ì‚­ì œí• ëŒ€ëŠ” if(pSoeun){}ìœ¼ë¡œ í•˜ì
+}
+
+void Exam2()
+{
+	CCharacter* pSoeun = new CCharacter();
+	CCharacter* pYoonsung = new CCharacter();
+
+	pSoeun = pYoonsung;
+
+	delete pSoeun; //ì–˜ëŠ” í•  í•„ìš”ê°€ ì—†ì–´
+	delete pYoonsung;
+}
+
+void Exam3()
+{
+	CCharacter* pHeejae = new CCharacter();
+	CCharacter* pWonhyo = new CCharacter();
+
+	pHeejae = pWonhyo;
+
+	delete pWonhyo;
+	pHeejae -> SetHP(99); //ì´ë¯¸ í•´ì œëœ ë©”ëª¨ë¦¬ë¥¼ ì°¸ì¡°í•˜ëŠ” í¬ì¸í„° : ëŒ•ê¸€ë§ í¬ì¸í„°
+
+}
+
+void Exam4()
+{
+
+
+
+}
 
 
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	//í”„ë¡œê·¸ë¨ ì‹¤í–‰ì‹œ ìµœì´ˆ í•œë²ˆë§Œ ì„¸íŒ…í•´ì¤€ë‹¤.
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+
 	//TestValue1();
 	
 	//TestValue2();
@@ -161,14 +203,17 @@ int _tmain(int argc, _TCHAR* argv[])
 	//TestPointer_3();
 	//TestPointer_4();
 	//TestReference_1();
-	TestValuePointer();
-	
+	//TestValuePointer();
+	//Exam1();
+	//Exam2();
+	Exam2();
+	//Exam4();
 	getchar();
 
 
 	/*week4 
-	std::string helloWorld = "Hello world!"; //ÀÌ°ÍÀº ¹®ÀÚ¿­ÀÌ ¾Æ´Ï¶ó °´Ã¼¾ß ¤»¤»¤»¤»¤»±×·¡¼­ ÀÌ·¸°Ô ÇÏ¸é ÀÌ»óÇÏ°Ô ³ª¿Â´Ù
-	//usernamespace·Î std»ı·« ÇÒ ¼ö ÀÖÁö¸¸ Çö¾÷¿¡¼­´Â ¾ÈÇØ						
+	std::string helloWorld = "Hello world!"; //ì´ê²ƒì€ ë¬¸ìì—´ì´ ì•„ë‹ˆë¼ ê°ì²´ì•¼ ã…‹ã…‹ã…‹ã…‹ã…‹ê·¸ë˜ì„œ ì´ë ‡ê²Œ í•˜ë©´ ì´ìƒí•˜ê²Œ ë‚˜ì˜¨ë‹¤
+	//usernamespaceë¡œ stdìƒëµ í•  ìˆ˜ ìˆì§€ë§Œ í˜„ì—…ì—ì„œëŠ” ì•ˆí•´						
 	printf_s("%s\n", helloWorld.c_str());
 
 	std::cout<<"hi!"<<helloWorld<<"oh"<<std::endl;

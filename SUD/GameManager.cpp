@@ -5,6 +5,8 @@
 #include <time.h>
 #include <synchapi.h>
 
+//should add code for memory leak check
+
 //array for lang
 std::string question[25] = {
 	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",

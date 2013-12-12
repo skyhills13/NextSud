@@ -14,13 +14,14 @@ CPlayerCharacter::~CPlayerCharacter(void)
 
 void CPlayerCharacter::SetInfo()
 {
-	printf_s("캐릭터 별명을 입력하세요\n");
+	printf_s("플레이할 캐릭터 별명을 입력하세요\n");
 	std::string str_alias;
 	getline(std::cin, str_alias);
 	SetName(str_alias);
 
-	printf_s("다음 중 플레이할 언어 입력하세요 \n"); 
-	printf_s("1) C  2) JAVA  3) Python \n");
+	//divide languages after project is done
+	//printf_s("다음 중 플레이할 언어 입력하세요 \n"); 
+	//printf_s("1) C  2) JAVA  3) Python \n");
 	/*later about language
 	1. input by number
 	2. put language information by string just like now

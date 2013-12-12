@@ -8,12 +8,13 @@
 //should add code for memory leak check
 
 //array for lang
+//process-> program would be better. cause they probably don't know about process
 std::string question[25] = {
 	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
 	"4byte 짜리 숫자 자료형은?\n",
 	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
-	"4byte 짜리 숫자 자료형은?\n",
+	"sleep(1000);은 괄호 안에 표시된 시간만큼 프로세스를 중단함을 의미한다. 몇초 동안 중단될까?\n",
+	"?\n",
 	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
 	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
 	"4byte 짜리 숫자 자료형은?\n",
@@ -39,7 +40,7 @@ std::string options[25]= {
 	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",//make for loop for number 5 option
 	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
 	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
-	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
+	"(1) 0.001초 \n(2) 0.01초 \n(3) 0.1초 \n(4) 1초 \n(5) 모르겠다 \n",
 	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
 	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
 	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
@@ -92,6 +93,10 @@ void CGameManager::Init()
 
 	m_PlayerCharacter->SetInfo();
 	m_PlayerCharacter->PrintInfo();
+
+	SetNPCs();
+
+	StartTutorial();
 
 	srand((unsigned int)time(NULL));
 	CreateMonsters();
@@ -315,4 +320,19 @@ bool CGameManager::InputProc()
 
 
 	return true;
+}
+
+void CGameManager::SetNPCs()
+{
+	throw std::logic_error("The method or operation is not implemented.");
+}
+
+void CGameManager::StartTutorial()
+{
+	printf("먼저, 게임에 필요한 기본 요소를 익히고, 게임이 어떤 방식으로 진행되는지 맛보기를 해보겠습니다\n");
+	printf("이 게임은 %d x %d 크기의 바둑판 같은 모양의 지도 위에서 진행됩니다\n", MAP_SIZE, MAP_SIZE);
+	printf("당신의 위치는 키보드 입력이 있을때마다 출력되므로 어디있는지 외우지는 않아도 됩니다.\n");
+	printf("먼저 상점으로 이동해 보겠습니다.\n");
+	printf("이동은 W(위쪽), A(왼쪽), S(아래쪽), D(오른쪽)를 누르고 엔터를 누르면 됩니다.\n");
+	printf("상점 위치 : [%d, %d] \n", , );
 }

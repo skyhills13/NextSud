@@ -24,6 +24,8 @@ protected:
 	void CreateMonsters();
 	void CheckMap();
 	void StartBattle(CMonster* pMonster);
+	void SetNPCs();
+	void StartTutorial();
 	//void MakeProblemSet();
 
 protected:

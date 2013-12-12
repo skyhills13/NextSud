@@ -13,6 +13,7 @@ public:
 	CPlayerCharacter(void);
 	~CPlayerCharacter(void);
 
+	
 	void InitHP(){m_info.hp = INITIAL_HP_P;}
 	void SetInfo();
 	void PrintInfo();

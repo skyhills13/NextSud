@@ -77,6 +77,17 @@ CGameManager::~CGameManager(void)
 
 void CGameManager::Init()
 {
+	printf("[개발자의 말]\n");
+	printf("본 게임은 프로그래밍의 프자도 모르는 이들을 위한 게임으로,\n"); 
+	printf("개발자의 힘들었던 작년 경험을 살려 만들었습니다.\n");
+	printf("프로그래밍 경험이 조금이라도 있다면,\n");
+	printf("이 게임은 아마 너무 쉬울 것입니다.\n");
+	printf("그럼에도 불구하고, 게임을 시작하시겠습니까? (y/n)\n");
+
+	//handle inputproc for y/n
+	//y:지옥이 되려고 하는 당신의 1학기가 조금이라도 나아지길 바라며..
+
+
 	printf("[GAME START!]\n");
 
 	m_PlayerCharacter->SetInfo();

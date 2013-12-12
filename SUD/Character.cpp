@@ -62,8 +62,8 @@ void CCharacter::InitExp()
 void CCharacter::InitPosition()
 {
 	Position pos;
-	pos.x = 5;
-	pos.y = 5;
+	pos.x = MAP_SIZE/2;
+	pos.y = MAP_SIZE/2;
 	SetPosition(pos);
 }
 

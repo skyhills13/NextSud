@@ -1,15 +1,104 @@
-﻿Build started 2013-12-05 오후 6:58:50.
+﻿Build started 2013-12-19 오후 5:51:47.
      1>Project "C:\Users\Administrator\Documents\Visual Studio 2012\Projects\nextSUD\trunk\inclass\inclass.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\inclass.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt inclass.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\inclass.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Character.cpp Mob.cpp NPC.cpp inclass.cpp
          inclass.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\Documents\Visual Studio 2012\Projects\nextSUD\trunk\Debug\inclass.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Administrator\Documents\Visual Studio 2012\Projects\nextSUD\trunk\Debug\inclass.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Administrator\Documents\Visual Studio 2012\Projects\nextSUD\trunk\Debug\inclass.lib" /MACHINE:X86 Debug\Character.obj
-         Debug\inclass.obj
-         Debug\stdafx.obj
-         inclass.vcxproj -> C:\Users\Administrator\Documents\Visual Studio 2012\Projects\nextSUD\trunk\Debug\inclass.exe
-     1>Done Building Project "C:\Users\Administrator\Documents\Visual Studio 2012\Projects\nextSUD\trunk\inclass\inclass.vcxproj" (Build target(s)).
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(11): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(20): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(21): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(22): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(36): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(44): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(53): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(65): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(66): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(67): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(89): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(107): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(108): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(123): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(134): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(143): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(149): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(155): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(164): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(165): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(175): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+     1>c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\inclass.cpp(176): error C2259: 'CCharacter' : cannot instantiate abstract class
+                 due to following members:
+                 'void CCharacter::PrintType(void)' : is abstract
+                 c:\users\administrator\documents\visual studio 2012\projects\nextsud\trunk\inclass\character.h(12) : see declaration of 'CCharacter::PrintType'
+         Character.cpp
+         Generating Code...
+         Compiling...
+         NPC.cpp
+         Mob.cpp
+         Generating Code...
+     1>Done Building Project "C:\Users\Administrator\Documents\Visual Studio 2012\Projects\nextSUD\trunk\inclass\inclass.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:00.29
+Time Elapsed 00:00:00.19

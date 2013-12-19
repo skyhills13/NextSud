@@ -4,6 +4,8 @@
 #include "stdafx.h"
 #include "Character.h"
 #include <crtdbg.h>
+#include "NPC.h"
+#include "Mob.h"
 
 void TestValue1(){
 	CCharacter player;
@@ -180,19 +182,12 @@ void Exam3()
 
 }
 
-void Exam4()
-{
-
-
-
-}
-
 
 
 int _tmain(int argc, _TCHAR* argv[])
 {
 	//프로그램 실행시 최초 한번만 세팅해준다.
-	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	//_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
 	//TestValue1();
 	
@@ -206,8 +201,28 @@ int _tmain(int argc, _TCHAR* argv[])
 	//TestValuePointer();
 	//Exam1();
 	//Exam2();
-	Exam2();
+	//Exam2();
 	//Exam4();
+
+	CCharacter* party[3];
+
+	CCharacter* pSoeun = new CCharacter();
+	CMob* pJinoo = new CMob();
+	CNPC* pYoon = new CNPC();
+
+	printf_s("\n");
+
+	party[0] = pSoeun;
+	party[1] = pJinoo;
+	party[2] = pYoon;
+
+	for(auto pChar: party)
+	{
+		pChar -> PrintType();
+		delete pChar;
+		printf_s("\n");
+	}
+
 	getchar();
 
 

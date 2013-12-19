@@ -5,6 +5,7 @@
 #include <time.h>
 #include <synchapi.h>
 
+
 //should add code for memory leak check
 
 //array for lang
@@ -78,15 +79,40 @@ CGameManager::~CGameManager(void)
 
 void CGameManager::Init()
 {
+	isRun = true;
 	printf("[개발자의 말]\n");
-	printf("본 게임은 프로그래밍의 프자도 모르는 이들을 위한 게임으로,\n"); 
+	printf("본 게임은 프로그래밍의 프자도 모르는 이들이\n");
+	printf("C언어의 기본적인 요소들을 가볍게 익힐 수 있는 게임으로\n"); 
 	printf("개발자의 힘들었던 작년 경험을 살려 만들었습니다.\n");
+	printf("\n");
+	printf("(▼ 계속 보려면 엔터키를 누르세요)");
+	std::cin.get();
+	printf("\n");
 	printf("프로그래밍 경험이 조금이라도 있다면,\n");
 	printf("이 게임은 아마 너무 쉬울 것입니다.\n");
 	printf("그럼에도 불구하고, 게임을 시작하시겠습니까? (y/n)\n");
 
-	//handle inputproc for y/n
-	//y:지옥이 되려고 하는 당신의 1학기가 조금이라도 나아지길 바라며..
+	std::string strInput;
+	getline(std::cin, strInput);
+	printf_s("INPUT:%s\n",strInput.c_str());
+	
+	if(strInput == "y" || strInput =="Y")
+	{
+		printf_s("지옥이 되려고 하는 당신의 1학기가 조금이라도 나아지길 바라며..\n");
+		//to look like it's on loading
+		for(int i = 0 ; i < 5 ; ++i)
+		{
+			printf_s(".");
+			Sleep(1000);
+		}
+	}
+	else if(strInput == "n" || strInput =="N")
+	{
+		printf_s("bye bye\n");
+		Sleep(2000);
+		isRun= false;
+	}
+
 
 
 	printf("[GAME START!]\n");
@@ -274,12 +300,15 @@ void CGameManager::Run()
 
 void CGameManager::Release()
 {
-
 }
 
 
 bool CGameManager::InputProc()
 {
+	if(!isRun)
+	{
+		return false;
+	}
 	//키보드 입력을 받아서 
 	//커맨드를 파싱하고 실행한다.
 	//q를 입력받으면 종료된다
@@ -334,5 +363,5 @@ void CGameManager::StartTutorial()
 	printf("당신의 위치는 키보드 입력이 있을때마다 출력되므로 어디있는지 외우지는 않아도 됩니다.\n");
 	printf("먼저 상점으로 이동해 보겠습니다.\n");
 	printf("이동은 W(위쪽), A(왼쪽), S(아래쪽), D(오른쪽)를 누르고 엔터를 누르면 됩니다.\n");
-	printf("상점 위치 : [%d, %d] \n", , );
+	//printf("상점 위치 : [%d, %d] \n", , );
 }

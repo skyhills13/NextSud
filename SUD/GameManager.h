@@ -26,11 +26,10 @@ protected:
 	void StartBattle(CMonster* pMonster);
 	void SetNPCs();
 	void StartTutorial();
-	//void MakeProblemSet();
 
 protected:
+	bool isRun;
 	CGameMap m_Map;
-
 	CPlayerCharacter* m_PlayerCharacter; //player character
 };
 

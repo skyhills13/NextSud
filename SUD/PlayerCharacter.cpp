@@ -28,9 +28,9 @@ void CPlayerCharacter::SetInfo()
 	###more importantly### 
 	3. divide problem set by number 
 	4. create monsters by this input number*/
-	std::string str_language;
-	getline(std::cin, str_language);
-	SetLang(str_language);
+	//std::string str_language;
+	//getline(std::cin, str_language);
+	//SetLang(str_language);
 	InitPosition();
 	InitLevel();
 	InitExp();
@@ -43,7 +43,6 @@ void CPlayerCharacter::PrintInfo()
 	printf_s("============================================\n");
 	printf_s("============================================\n");
 	printf_s("[alias : %s ] \n",m_info.name.c_str());
-	printf_s("[languae : %s ] \n", m_info.lang.c_str());
 	printf_s("[HP : %d ] \n", m_info.hp);
 	printf_s("[level : %d ] \n", m_info.level);
 	printf_s("[exp : %d / %d ] \n", m_info.current_exp, m_info.total_exp);

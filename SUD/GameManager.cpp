@@ -79,7 +79,7 @@ CGameManager::~CGameManager(void)
 
 void CGameManager::Init()
 {
-	isRun = true;
+	//isRun = true;
 	printf("[개발자의 말]\n");
 	printf("본 게임은 프로그래밍의 프자도 모르는 이들이\n");
 	printf("C언어의 기본적인 요소들을 가볍게 익힐 수 있는 게임으로\n"); 
@@ -103,14 +103,14 @@ void CGameManager::Init()
 		for(int i = 0 ; i < 5 ; ++i)
 		{
 			printf_s(".");
-			Sleep(1000);
+			Sleep(500);
 		}
 	}
 	else if(strInput == "n" || strInput =="N")
 	{
 		printf_s("bye bye\n");
 		Sleep(2000);
-		isRun= false;
+		//isRun= false;
 	}
 
 
@@ -122,11 +122,10 @@ void CGameManager::Init()
 
 	SetNPCs();
 
-	StartTutorial();
+	//StartTutorial();
 
 	srand((unsigned int)time(NULL));
 	CreateMonsters();
-
 }
 
 //in all questions, run is number 0 
@@ -305,10 +304,10 @@ void CGameManager::Release()
 
 bool CGameManager::InputProc()
 {
-	if(!isRun)
+	/*if(isRun = false)
 	{
 		return false;
-	}
+	}*/
 	//키보드 입력을 받아서 
 	//커맨드를 파싱하고 실행한다.
 	//q를 입력받으면 종료된다
@@ -353,7 +352,7 @@ bool CGameManager::InputProc()
 
 void CGameManager::SetNPCs()
 {
-	throw std::logic_error("The method or operation is not implemented.");
+	
 }
 
 void CGameManager::StartTutorial()

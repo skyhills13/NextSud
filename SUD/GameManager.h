@@ -16,13 +16,22 @@ enum BattleResult
 
 class CGameManager
 {
-public:
-	CGameManager(void);
-	~CGameManager(void);
+private:
+	static CGameManager* m_pInstance;
 
+	CGameManager(void);
+	virtual ~CGameManager(void);
+
+public:
+	static CGameManager* GetInstance();
+	static void ReleaseInstance();
+
+public:
 	void Init(); 
 	void Run();
 	void Release();
+
+	CPlayerCharacter* GetPlayerCharacter() {return m_PlayerCharacter;}
 
 protected:
 	bool InputProc(); //keyboard input 
@@ -31,7 +40,7 @@ protected:
 	BattleResult StartBattle(CMonster* pMonster);
 	void SetNPCs();
 	void StartTutorial();
-
+	void ResetPosition( CMonster* pMonster );
 protected:
 	bool isRun;
 	GameStatus m_GameStatus;

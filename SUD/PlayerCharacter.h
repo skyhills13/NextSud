@@ -1,5 +1,6 @@
 #pragma once
 #include "character.h"
+#include "GameMap.h"
 
 #define INITIAL_HP_P 10
 
@@ -25,5 +26,6 @@ public:
 
 protected:
 	int problemCounter;
+	int missedProblems[MAP_SIZE/2];
 };
 

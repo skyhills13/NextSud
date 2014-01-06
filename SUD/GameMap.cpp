@@ -1,5 +1,6 @@
 ﻿#include "stdafx.h"
 #include "GameMap.h"
+#include "GameManager.h"
 
 // 커밋 테스트용
 
@@ -35,5 +36,37 @@ MapInfo* CGameMap::GetMapInfo(int x, int y)
 
 	return &m_MapInfo[x][y];
 
+}
+
+void CGameMap::PrintMap()
+{
+	int character_x = CGameManager::GetInstance()->GetPlayerCharacter()->GetPosition().x;
+	int character_y = CGameManager::GetInstance()->GetPlayerCharacter()->GetPosition().y;
+
+	for(int j = 0; j < MAP_SIZE; ++j)
+	{
+		for(int i = 0; i < MAP_SIZE ; ++i)
+		{
+			if(i == character_x && j == character_y)
+				printf_s("0 ");
+			else
+				printf_s("X ");
+			/*if(m_MapInfo[i][j].pMonster != nullptr)
+				if(m_MapInfo[i][j].pMonster->GetWasWrong())
+					printf_s("%d ",m_MapInfo[i][j].pMonster->GetProblemIndex());
+				else
+					printf_s("Y ");
+			else
+				printf_s("N ");
+				*/
+		}
+		printf_s("\n");
+	}
+}
+
+void CGameMap::SetMapInfoNullptr( int x, int y )
+{
+	delete m_MapInfo[x][y].pMonster;
+	m_MapInfo[x][y].pMonster = nullptr;
 }
 

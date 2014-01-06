@@ -14,6 +14,9 @@ public:
 	~CGameMap(void);
 
 	MapInfo* GetMapInfo(int x, int y);
+	void	SetMapInfoNullptr(int x, int y) ;
+
+	void PrintMap();
 
 protected:
 	MapInfo m_MapInfo[MAP_SIZE][MAP_SIZE];

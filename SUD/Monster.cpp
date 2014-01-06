@@ -5,6 +5,7 @@
 
 CMonster::CMonster(void)
 {
+	//m_problem.problemIndex = NULL;
 }
 
 
@@ -15,21 +16,20 @@ CMonster::~CMonster(void)
 void CMonster::GiveProblem(int monsterIndex)
 {
 	char buf[20];
+
 	sprintf_s(buf, "problem/%d.txt",monsterIndex);
 	std::ifstream problemFile(buf);
-	
+	std::string answer_str;
+	std::getline(problemFile,answer_str);
+	m_problem.answer = atoi(answer_str.c_str());
+
 	while(!problemFile.eof())
 	{
 		std::string problemLine;
 		std::getline(problemFile, problemLine);
 		printf_s("%s\n",problemLine.c_str());
-
 	}
-
 	problemFile.close();
-
-	//printf_s("%s", m_problem.question.c_str());
-	//printf_s("%s", m_problem.options.c_str());
 }
 
 Info CMonster::GetAttackResult( AttackResult attack_result )
@@ -42,18 +42,12 @@ Info CMonster::GetAttackResult( AttackResult attack_result )
 		//therefore, hp++ 
 		//and it would be better if the position changes.
 		m_info.hp++;
+		SetWasWrong(true);
 		break;
 
 	case ATTACK_FAIL:
 		--m_info.hp;
-		if(IsAlive()==true)
-		{
-			SetPosition(5,6);//randomly redistribute
-		}
-		else
-		{
-			
-		}
+		break;
 
 	case DEFENSE:
 		break;

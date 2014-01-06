@@ -10,30 +10,15 @@
     <Filter Include="Maps">
       <UniqueIdentifier>{a69b924c-0d79-4d70-a045-d674617eb0f2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="StringSets">
-      <UniqueIdentifier>{c7e0e700-9f8f-43c8-a944-8d9ed8fc0f92}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="SystemMsgSet.h">
-      <Filter>StringSets</Filter>
-    </ClInclude>
-    <ClInclude Include="StringSet.h">
-      <Filter>StringSets</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="ProblemSet.h">
-      <Filter>StringSets</Filter>
-    </ClInclude>
     <ClInclude Include="PlayerCharacter.h">
       <Filter>Characters</Filter>
-    </ClInclude>
-    <ClInclude Include="PbSetManager.h">
-      <Filter>StringSets</Filter>
     </ClInclude>
     <ClInclude Include="GameManager.h">
       <Filter>Admin</Filter>
@@ -63,15 +48,6 @@
     </ClCompile>
     <ClCompile Include="PlayerCharacter.cpp">
       <Filter>Characters</Filter>
-    </ClCompile>
-    <ClCompile Include="ProblemSet.cpp">
-      <Filter>StringSets</Filter>
-    </ClCompile>
-    <ClCompile Include="SystemMsgSet.cpp">
-      <Filter>StringSets</Filter>
-    </ClCompile>
-    <ClCompile Include="StringSet.cpp">
-      <Filter>StringSets</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="SUD.cpp" />

@@ -54,7 +54,7 @@ void CPlayerCharacter::PrintInfo()
 
 void CPlayerCharacter::CheckLevel(int current_exp)
 {
-	if(current_exp % LEVELUP_EXP == 0 )
+	if(current_exp !=0 && current_exp % LEVELUP_EXP == 0 )
 	{
 		++m_info.level;
 		printf_s("!!CONGRATULATIONS, LEVEL UP!!");
@@ -63,6 +63,7 @@ void CPlayerCharacter::CheckLevel(int current_exp)
 	{
 		printf_s("============================================\n");
 		printf_s("============================================\n");
+		printf_s("[HP : %d ] \n", m_info.hp);
 		printf_s("[level : %d ] \n", m_info.level);
 		printf_s("[exp : %d / %d ] \n", m_info.current_exp, m_info.total_exp);
 		printf_s("(%d exp) to level up\n", 5-(current_exp % 5));
@@ -78,9 +79,12 @@ Info CPlayerCharacter::GetAttackResult( AttackResult attack_result)
 	case ATTACK_SUCCESS:
 	++m_info.current_exp;
 	CheckLevel(m_info.current_exp);
+	break;
 
 	//make planned attributes
 	case ATTACK_FAIL:
+	--m_info.hp;
+	CheckLevel(m_info.current_exp);
 	break;
 
 	case DEFENSE:

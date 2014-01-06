@@ -13,11 +13,11 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF|_CRTDBG_LEAK_CHECK_DF);
 
-	CGameManager gameManager;
+	CGameManager* gameManager = CGameManager::GetInstance();
 
-	gameManager.Init();
-	gameManager.Run(); //무한 루프가 있어야. 
-	gameManager.Release();
+	gameManager->Init();
+	gameManager->Run(); //무한 루프가 있어야. 
+	gameManager->Release();
 
 	//getchar();
 	return 0;

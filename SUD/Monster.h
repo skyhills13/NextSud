@@ -5,10 +5,10 @@
 
 struct Problem
 {
-	int index;
-	std::string question;
-	std::string options;
+//	int index;
 	int answer;
+	int problemIndex;
+	bool wasWrong;
 };
 
 class CMonster :
@@ -20,8 +20,8 @@ public:
 
 	void InitHP(){m_info.hp = INITIAL_HP_M;}
 
-	void SetIndex(int index){m_problem.index = index;}
-	int GetIndex(){return m_problem.index;}
+	void SetProblemIndex(int index){m_problem.problemIndex = index;}
+	int GetProblemIndex(){return m_problem.problemIndex;}
 
 	//about these functions
 	//get actually means print
@@ -31,6 +31,10 @@ public:
 
 	//void SetOptions(std::string options){m_problem.options = options;}
 	//std::string GetOptions(){return m_problem.options;}
+	
+	void SetWasWrong(bool wrong){m_problem.wasWrong = wrong;}
+	bool GetWasWrong(){return m_problem.wasWrong;}
+	void InitWasWrong(){m_problem.wasWrong = false;}
 
 	void SetAnswer(int answer){m_problem.answer = answer;}
 	int GetAnswer(){return m_problem.answer;}
@@ -38,7 +42,7 @@ public:
 	void GiveProblem(int monsterIndex);
 
 	Info GetAttackResult(AttackResult attack_result);
-
+	void ResetPosition();
 
 protected:
 	Problem m_problem;

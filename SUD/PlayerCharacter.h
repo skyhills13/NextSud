@@ -18,6 +18,12 @@ public:
 	void SetInfo();
 	void PrintInfo();
 	void CheckLevel(int current_exp);
-	Info Attacked(AttackResult attack_result);
+	Info GetAttackResult(AttackResult attack_result);
+	void InitProblemCounter();
+	int GetProblemCounter();
+	void IncreaseProblemCounter();
+
+protected:
+	int problemCounter;
 };
 

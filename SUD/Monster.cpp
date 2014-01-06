@@ -2,6 +2,7 @@
 #include "Monster.h"
 
 
+
 CMonster::CMonster(void)
 {
 }
@@ -11,13 +12,27 @@ CMonster::~CMonster(void)
 {
 }
 
-void CMonster::GiveProblem()
+void CMonster::GiveProblem(int monsterIndex)
 {
-	printf_s("%s", m_problem.question.c_str());
-	printf_s("%s", m_problem.options.c_str());
+	char buf[20];
+	sprintf_s(buf, "problem/%d.txt",monsterIndex);
+	std::ifstream problemFile(buf);
+	
+	while(!problemFile.eof())
+	{
+		std::string problemLine;
+		std::getline(problemFile, problemLine);
+		printf_s("%s\n",problemLine.c_str());
+
+	}
+
+	problemFile.close();
+
+	//printf_s("%s", m_problem.question.c_str());
+	//printf_s("%s", m_problem.options.c_str());
 }
 
-Info CMonster::Attacked( AttackResult attack_result )
+Info CMonster::GetAttackResult( AttackResult attack_result )
 {
 	//splendid idea needed
 	switch(attack_result)

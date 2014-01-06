@@ -73,7 +73,7 @@ void CCharacter::PrintPosition()
 	printf_s("[position : (%d, %d) ] \n", m_position.x, m_position.y);	
 }
 
-Info CCharacter::Attacked( AttackResult attack_result )
+Info CCharacter::GetAttackResult( AttackResult attack_result )
 {
 	return m_info;
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include "character.h"
+#include <fstream>
 #define INITIAL_HP_M 1
 
 struct Problem
@@ -25,18 +26,18 @@ public:
 	//about these functions
 	//get actually means print
 	//if it works well, refactor.
-	void SetQuestion(std::string question){m_problem.question = question;}
-	std::string GetQuestion(){return m_problem.question;}
+	//void SetQuestion(std::string question){m_problem.question = question;}
+	//std::string GetQuestion(){return m_problem.question;}
 
-	void SetOptions(std::string options){m_problem.options = options;}
-	std::string GetOptions(){return m_problem.options;}
+	//void SetOptions(std::string options){m_problem.options = options;}
+	//std::string GetOptions(){return m_problem.options;}
 
 	void SetAnswer(int answer){m_problem.answer = answer;}
 	int GetAnswer(){return m_problem.answer;}
 
-	void GiveProblem();
+	void GiveProblem(int monsterIndex);
 
-	Info Attacked(AttackResult attack_result);
+	Info GetAttackResult(AttackResult attack_result);
 
 
 protected:

@@ -35,7 +35,7 @@ void CPlayerCharacter::SetInfo()
 	InitLevel();
 	InitExp();
 	InitHP();
-	
+	InitProblemCounter();
 }
 
 void CPlayerCharacter::PrintInfo()
@@ -71,10 +71,7 @@ void CPlayerCharacter::CheckLevel(int current_exp)
 	}
 }
 
-//1.should this return type be Info? why can't it be just void
-//1. why it has an error when I declare it on character.h
-// agebreak : character.h 에 선언해도 상관 없습니다. 선언부를 구현해 두었습니다. 참고하시기 바랍니다.
-Info CPlayerCharacter::Attacked( AttackResult attack_result)
+Info CPlayerCharacter::GetAttackResult( AttackResult attack_result)
 {
 	switch(attack_result)
 	{
@@ -97,5 +94,17 @@ Info CPlayerCharacter::Attacked( AttackResult attack_result)
 
 }
 
+void CPlayerCharacter::InitProblemCounter()
+{
+	problemCounter = 0;
+}
 
+int CPlayerCharacter::GetProblemCounter()
+{
+	return problemCounter;
+}
 
+void CPlayerCharacter::IncreaseProblemCounter()
+{
+	problemCounter++;
+}

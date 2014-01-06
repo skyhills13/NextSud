@@ -5,68 +5,66 @@
 #include <time.h>
 #include <synchapi.h>
 
-
-//should add code for memory leak check
-
 //array for lang
 //process-> program would be better. cause they probably don't know about process
-std::string question[25] = {
-	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
-	"4byte 짜리 숫자 자료형은?\n",
-	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-	"sleep(1000);은 괄호 안에 표시된 시간만큼 프로세스를 중단함을 의미한다. 몇초 동안 중단될까?\n",
-	"?\n",
-	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
-	"4byte 짜리 숫자 자료형은?\n",
-	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
-	"4byte 짜리 숫자 자료형은?\n",
-	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
-	"4byte 짜리 숫자 자료형은?\n",
-	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
-	"4byte 짜리 숫자 자료형은?\n",
-	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
-	"4byte 짜리 숫자 자료형은?\n",
-	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
-	"4byte 짜리 숫자 자료형은?\n",
-	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
-};
-std::string options[25]= { 
-	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",//make for loop for number 5 option
-	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
-	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
-	"(1) 0.001초 \n(2) 0.01초 \n(3) 0.1초 \n(4) 1초 \n(5) 모르겠다 \n",
-	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
-	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
-	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
-	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
-	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
-	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
-	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
-	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
-	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
-	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
-	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
-	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
-	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
-	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
-	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
-	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
-	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
-	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
-	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
-	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
-	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n"
-};
+//std::string question[25] = {
+//	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
+//	"4byte 짜리 숫자 자료형은?\n",
+//	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
+//	"sleep(1000);은 괄호 안에 표시된 시간만큼 프로세스를 중단함을 의미한다. 몇초 동안 중단될까?\n",
+//	"?\n",
+//	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
+//	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
+//	"4byte 짜리 숫자 자료형은?\n",
+//	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
+//	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
+//	"4byte 짜리 숫자 자료형은?\n",
+//	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
+//	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
+//	"4byte 짜리 숫자 자료형은?\n",
+//	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
+//	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
+//	"4byte 짜리 숫자 자료형은?\n",
+//	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
+//	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
+//	"4byte 짜리 숫자 자료형은?\n",
+//	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
+//	"프로그래밍 언어에서 마침표 역할을 하는 것은?\n",
+//	"4byte 짜리 숫자 자료형은?\n",
+//	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
+//	"다음 중 visual studio와 비슷한 역할을 하는것이 아닌것은?\n",
+//};
+//std::string options[25]= { 
+//	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",//make for loop for number 5 option
+//	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
+//	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
+//	"(1) 0.001초 \n(2) 0.01초 \n(3) 0.1초 \n(4) 1초 \n(5) 모르겠다 \n",
+//	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
+//	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
+//	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
+//	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
+//	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
+//	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
+//	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
+//	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
+//	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
+//	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
+//	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
+//	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
+//	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
+//	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
+//	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
+//	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
+//	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
+//	"(1) ; \n(2) : \n(3) . \n(4) / \n(5) 모르겠다 \n",
+//	"(1) char \n(2) short \n(3) int \n(4) long \n(5) 모르겠다 \n",
+//	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n",
+//	"(1) eclipse \n(2) virtualbox \n(3) sublime text \n(4) xcode \n(5) 모르겠다\n"
+//};
 
 
 CGameManager::CGameManager(void)
+	:m_GameStatus(NORMAL)
 {
 	m_PlayerCharacter = new CPlayerCharacter;
 }
@@ -120,7 +118,7 @@ void CGameManager::Init()
 	m_PlayerCharacter->SetInfo();
 	m_PlayerCharacter->PrintInfo();
 
-	SetNPCs();
+	//SetNPCs();
 
 	//StartTutorial();
 
@@ -168,30 +166,25 @@ void CGameManager::CreateMonsters()
 			
 			pMonster->InitHP();
 			pMonster->SetIndex(i);
-			pMonster->SetQuestion(question[i]);
-			pMonster->SetOptions(options[i]);
+			//pMonster->SetQuestion(question[i]);
+			//pMonster->SetOptions(options[i]);
 			pMonster->SetAnswer(1);
-			
 			//for debugging 
 			/*printf_s("Monster Name: %s   " , pMonster->GetName().c_str()); 
 			pMonster->PrintPosition();*/
-			
 			totalMonster++;
 		}
-
 		else
 		{
 			--i;
 		}
 	}
 	printf_s("총 %d마리의 몬스터가 생성되었습니다.\n",totalMonster); 
-
 }
 
 //!!!!!!!!!!!!!!!!!!!!!compare to previous source code of mine!!!!!!!!!!!!!!!!!!!
 void CGameManager::CheckMap()
 {
-
 	Position currentPosition  = m_PlayerCharacter->GetPosition();
 	MapInfo* pMapInfo = m_Map.GetMapInfo(currentPosition.x, currentPosition.y);
 	if(!pMapInfo)
@@ -200,27 +193,29 @@ void CGameManager::CheckMap()
 	if(pMapInfo->pMonster && pMapInfo -> pMonster -> IsAlive())
 	//if(pMapInfo->pMonster)
 	{
-		StartBattle(pMapInfo->pMonster);
-		//BattleResult result =StartBattle();
+		m_GameStatus = BATTLE;
+		BattleResult result = StartBattle(pMapInfo->pMonster);
+		if(result == BATTLE_WIN){
+			delete pMapInfo->pMonster;
+			pMapInfo->pMonster = nullptr;
+		}
 		//warmth of the body printf
 
 	}
 }
 
-void CGameManager::StartBattle(CMonster* pMonster)
+BattleResult CGameManager::StartBattle(CMonster* pMonster)
 {
-	//BattleResult battleResult;
+	BattleResult battleResult = (BattleResult)NULL;
 	
-	//CMonster* pMonster to pMapInfo
-	//delete pMapInfo->pMonster;
-	//pMapInfo -> pMonster = nullptr;
-
 	printf_s("해당 자리에 몬스터가 있(었)습니다\n");//for debug
 	while(m_PlayerCharacter->IsAlive() && pMonster->IsAlive())
 	{
-		
 		printf_s("몬스터를 만났습니다\n");
-		pMonster->GiveProblem();
+		printf_s("\n");
+		printf_s("####################################################\n");
+		printf_s("####################################################\n");
+		pMonster->GiveProblem(m_PlayerCharacter->GetProblemCounter());
 		std::string str_input_answer;
 		getline(std::cin,str_input_answer); //change it to int type for efficiency
 		int player_answer = atoi(str_input_answer.c_str());
@@ -230,33 +225,32 @@ void CGameManager::StartBattle(CMonster* pMonster)
 		if(((pMonster->GetIndex())% 4)+1 == atoi(input_answer.c_str()))*/
 		if(player_answer==1) //for easy debugging
 		{
-			printf_s("############\n");
+			printf_s("###########################################\n");
 			printf_s("정답입니다\n");
-			printf_s("############\n");
-
-			// agebreak : Attacked는 공격을 당했을때 호출 해야 합니다. 논리적으로 맞지 않습니다. 개선이 필요해 보입니다.
-			m_PlayerCharacter->Attacked(ATTACK_SUCCESS);
-			pMonster->Attacked(ATTACK_FAIL);
+			printf_s("###########################################\n");
+			
+			m_PlayerCharacter->GetAttackResult(ATTACK_SUCCESS);
+			pMonster->GetAttackResult(ATTACK_FAIL);
 		}
 		else if( player_answer == 0 ) 
 		{
-			printf_s("############\n");
+			printf_s("##########################################\n");
 			printf_s("얼레리 꼴레리\n");
-			printf_s("############\n");	
+			printf_s("##########################################\n");	
 		}
 		else if( player_answer == 5 )
 		{
-			printf_s("############\n");
+			printf_s("##########################################\n");
 			printf_s("힌트 줄까?\n");
-			printf_s("############\n");
+			printf_s("##########################################\n");
 		}
-		else //exception처리 6,7,8,9 눌렀을때
+		else //dealing with exceptions when user inputs are other than 0,1,2,3,4,5
 		{
-			printf_s("############\n");
+			printf_s("##########################################\n");
 			printf_s("틀렸어\n");
-			printf_s("############\n");
-			m_PlayerCharacter->Attacked(ATTACK_FAIL);
-			pMonster->Attacked(ATTACK_SUCCESS);
+			printf_s("##########################################\n");
+			m_PlayerCharacter->GetAttackResult(ATTACK_FAIL);
+			pMonster->GetAttackResult(ATTACK_SUCCESS);
 		}
 
 		if(!m_PlayerCharacter->IsAlive())
@@ -264,6 +258,7 @@ void CGameManager::StartBattle(CMonster* pMonster)
 			printf_s("############\n");
 			printf_s("캐릭터가 죽었습니다. 공부를 조금 더 합시다\n");
 			printf_s("############\n");
+			battleResult = BATTLE_LOSE;
 		}
 
 		if(!pMonster->IsAlive())
@@ -271,10 +266,10 @@ void CGameManager::StartBattle(CMonster* pMonster)
 			printf_s("############\n");
 			printf_s("몬스터가 죽었습니다\n");
 			printf_s("############\n");
-			//battleResult = BATTLE_WIN;
+			battleResult = BATTLE_WIN;
 		}
 
-		Sleep(1000); //why? to look like it's game. 
+		Sleep(1000); //to look like it's game. 
 					//print lines with the term of 1 second
 	}
 	
@@ -287,6 +282,10 @@ void CGameManager::StartBattle(CMonster* pMonster)
 
 	printf_s("============================================\n");
 	printf_s("============================================\n");
+
+	m_GameStatus = NORMAL;
+	return battleResult;
+
 }
 
 void CGameManager::Run()
@@ -313,9 +312,7 @@ bool CGameManager::InputProc()
 	//q를 입력받으면 종료된다
 	
 	std::string strInput;
-	/*
-	char quitKey1 = 'q';
-	char quitKey2 = 'Q';*/
+
 	printf_s("원하는 키를 입력하세요\n");
 	getline(std::cin, strInput);
 	printf_s("INPUT:%s\n",strInput.c_str());
@@ -345,8 +342,6 @@ bool CGameManager::InputProc()
 		printf_s("quit\n");
 		return false;
 	}
-
-
 	return true;
 }
 

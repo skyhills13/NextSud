@@ -2,6 +2,11 @@
 #include "GameMap.h"
 #include "PlayerCharacter.h"
 
+enum GameStatus
+{
+	NORMAL,
+	BATTLE
+};
 
 enum BattleResult
 {
@@ -23,12 +28,13 @@ protected:
 	bool InputProc(); //keyboard input 
 	void CreateMonsters();
 	void CheckMap();
-	void StartBattle(CMonster* pMonster);
+	BattleResult StartBattle(CMonster* pMonster);
 	void SetNPCs();
 	void StartTutorial();
 
 protected:
 	bool isRun;
+	GameStatus m_GameStatus;
 	CGameMap m_Map;
 	CPlayerCharacter* m_PlayerCharacter; //player character
 };

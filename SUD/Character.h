@@ -77,7 +77,7 @@ public:
 	//what is it for?
 	//virtual void aa();
 
-	virtual Info Attacked(AttackResult attack_result);
+	virtual Info GetAttackResult(AttackResult attack_result);
 
 protected:
 	Position m_position;

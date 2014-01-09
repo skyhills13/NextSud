@@ -1,0 +1,7 @@
+2
+다음중 C언어에서 console로 입력을 받는 함수가 아닌것은?
+
+(1) scanf();
+(2) printf();
+(3) getchar();
+(4) getch();

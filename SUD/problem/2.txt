@@ -1,0 +1,17 @@
+2
+====================================================
+#include <stdio.h>
+
+int main(void)
+{
+	printf("hello\n");
+	printf("welcome to NEXT\n");
+}
+====================================================
+
+다음 중 첫째 줄의 stdio는 무엇의 약자일까?
+
+1)	standard in and out
+2)	standard input and output
+3)	standard iostream
+4)	standard ios

@@ -1,0 +1,22 @@
+====================================================
+#include <stdio.h>
+
+int main(void)
+{
+	printf("hello\n");
+	printf("welcome to NEXT\n");
+}
+====================================================
+
+\n 이 없을 경우 출력 결과는 어떻게 변하는지 유추하라
+
+1)
+HELLO 
+WELCOME TO NEXT
+2)
+hello 
+welcome to next
+3)
+hellowelcometonext
+4)
+hellowelcome to NEXT

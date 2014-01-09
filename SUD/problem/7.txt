@@ -1,0 +1,7 @@
+2
+다음중 옳은 문법표현식을 고르세요
+
+(1) char var = "3";
+(2) char var = '1';
+(3) char var = 'a';
+(4) char var = 1;
